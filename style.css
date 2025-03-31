@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: whitesmoke;
+    padding: 10px;
+    margin: 5px;
+}
+
+.item-2 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+}
+
+
