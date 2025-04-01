@@ -35,12 +35,23 @@
 }
 
 .about-1 {
+    padding: 10px;
+}
+
+.about-img-1 {
     border-radius: 50%;
 }
 
 .skill {
     margin: 5px;
     text-align: center;
+    padding: 10px;
+}
+
+.skill-1 {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
     padding: 10px;
 }
 
