@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     /* max-width: 1140px; */
+
+    font-family: "Krub", sans-serif;
+    font-weight: 500;   
 }
 
 .header {
@@ -11,11 +14,15 @@
     /* background-color: rgb(163, 211, 229); */
     padding: 10px;
     margin: 10px;
+
+    border: 3px solid #3868c7;
+    border-radius: 15px; /* ทำให้ขอบโค้งมน */
 }
 
 .header-1 {
     font-size: large;
     align-items: center;
+    padding: 10px;
 }
 
 .header-2 {
@@ -24,6 +31,7 @@
     gap: 20px;
     text-align: center;
     align-items: center;
+    padding: 10px;
 }
 
 .about {
