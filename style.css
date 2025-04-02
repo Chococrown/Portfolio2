@@ -8,10 +8,9 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: whitesmoke;
+    /* background-color: rgb(163, 211, 229); */
     padding: 10px;
-    margin: 5px;
-    
+    margin: 10px;
 }
 
 .header-1 {
@@ -31,11 +30,11 @@
     margin: 5px;
     text-align: center;
     padding: 10px;
-    
 }
 
 .about-1 {
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .about-img-1 {
@@ -44,27 +43,33 @@
 
 .skill {
     margin: 5px;
+    padding: 0 10px 10px 10px;
     text-align: center;
-    padding: 10px;
 }
 
 .skill-1 {
     display: flex;
     gap: 30px;
     justify-content: center;
+    /* margin-bottom: 10px; */
     padding: 10px;
-    margin-bottom: 10px;
 }
 
 .portfolio {
     margin: 5px;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
+    text-align: center;
+}
+
+.resume {
+    margin: 5px;
+    padding: 0 10px 10px 10px;
     text-align: center;
 }
 
 .contact {
     margin: 5px;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     text-align: center;
 }
 
