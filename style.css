@@ -53,13 +53,30 @@
     gap: 30px;
     justify-content: center;
     padding: 10px;
+    margin-bottom: 10px;
+}
+
+.portfolio {
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.contact {
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.contact-1 {
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .footer {
     margin: 5px;
     text-align: center;
     font-weight: bold;
-    padding: 10px;
 }
 
 
