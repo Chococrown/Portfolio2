@@ -38,6 +38,11 @@
     padding: 10px;
 }
 
+.header-img-1 {
+    align-items: center;
+}
+
+
 .about {
     margin: 5px;
     text-align: center;
