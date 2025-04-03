@@ -40,6 +40,7 @@
 
 .header-img-1 {
     align-items: center;
+    cursor: pointer;
 }
 
 
@@ -95,4 +96,13 @@
     font-weight: bold;
 }
 
+html.dark{
+    background-color: black;
+    
+    *{
+        background-color: black;
+        color: white;
+    }
 
+    
+}
