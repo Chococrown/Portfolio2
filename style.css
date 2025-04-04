@@ -10,6 +10,10 @@
     background-color: #f7f9fc;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -87,6 +91,12 @@
 .contact {
     margin: 5px;
     padding: 0 10px 10px 10px;
+    text-align: center;
+}
+
+.contact2 {
+    margin: 5px;
+    padding: 15px;
     text-align: center;
 }
 
