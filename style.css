@@ -43,6 +43,11 @@
     cursor: pointer;
 }
 
+.header-img- {
+    align-items: center;
+    cursor: pointer;
+}
+
 
 .about {
     margin: 5px;
