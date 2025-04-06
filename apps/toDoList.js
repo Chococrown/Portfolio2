@@ -6,40 +6,61 @@ function saveToStorage() {
 
 function renderTodos() {
   const list = document.getElementById('todo-list');
+  const search = document.getElementById('search-input').value.toLowerCase();
   list.innerHTML = '';
 
-  todoList.forEach((todo, index) => {
-    const li = document.createElement('li');
-    li.className = todo.done ? 'done' : '';
+  todoList
+    .filter(todo => todo.text.toLowerCase().includes(search))
+    .forEach((todo, index) => {
+      const li = document.createElement('li');
+      li.className = todo.done ? 'done' : '';
 
-    const text = document.createTextNode(todo.text);
-    li.appendChild(text);
+      const content = document.createElement('div');
+      const category = document.createElement('span');
+      category.className = 'category-label';
+      category.textContent = todo.category;
 
-    const actions = document.createElement('div');
-    actions.classList.add('actions');
+      const text = document.createElement('span');
+      text.textContent = todo.text;
 
-    const doneBtn = document.createElement('button');
-    doneBtn.textContent = '✓';
-    doneBtn.onclick = () => toggleDone(index);
+      content.appendChild(category);
+      content.appendChild(text);
+      li.appendChild(content);
 
-    const delBtn = document.createElement('button');
-    delBtn.textContent = 'ลบ';
-    delBtn.onclick = () => deleteTodo(index);
+      const actions = document.createElement('div');
+      actions.classList.add('actions');
 
-    actions.appendChild(doneBtn);
-    actions.appendChild(delBtn);
-    li.appendChild(actions);
+      const editBtn = document.createElement('button');
+      editBtn.textContent = 'แก้ไข';
+      editBtn.classList.add('edit');
+      editBtn.onclick = () => editTodo(index);
 
-    list.appendChild(li);
-  });
+      const doneBtn = document.createElement('button');
+      doneBtn.textContent = '✓';
+      doneBtn.classList.add('done');
+      doneBtn.onclick = () => toggleDone(index);
+
+      const delBtn = document.createElement('button');
+      delBtn.textContent = 'ลบ';
+      delBtn.classList.add('delete');
+      delBtn.onclick = () => deleteTodo(index);
+
+      actions.appendChild(editBtn);
+      actions.appendChild(doneBtn);
+      actions.appendChild(delBtn);
+
+      li.appendChild(actions);
+      list.appendChild(li);
+    });
 }
 
 function addTodo() {
   const input = document.getElementById('todo-input');
+  const category = document.getElementById('category-input').value;
   const text = input.value.trim();
 
   if (text !== '') {
-    todoList.push({ text: text, done: false });
+    todoList.push({ text, category, done: false });
     saveToStorage();
     renderTodos();
     input.value = '';
@@ -56,6 +77,15 @@ function deleteTodo(index) {
   todoList.splice(index, 1);
   saveToStorage();
   renderTodos();
+}
+
+function editTodo(index) {
+  const newText = prompt('แก้ไขรายการ:', todoList[index].text);
+  if (newText !== null && newText.trim() !== '') {
+    todoList[index].text = newText.trim();
+    saveToStorage();
+    renderTodos();
+  }
 }
 
 renderTodos();

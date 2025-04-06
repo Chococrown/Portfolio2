@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
+    <link rel="stylesheet" href="/styles/toDoList.css">
 </head>
 <body>
 
-    <div class="todo-container">
-        <h1>To-do List</h1>
-        <div class="input-group">
-          <input type="text" id="todo-input" placeholder="เพิ่มงานที่ต้องทำ...">
-          <button onclick="addTodo()">เพิ่ม</button>
-        </div>
-        <ul id="todo-list"></ul>
+    <div class="input-group">
+        <input type="text" id="todo-input" placeholder="เพิ่มงานที่ต้องทำ...">
+        <select id="category-input">
+          <option value="ทั่วไป">ทั่วไป</option>
+          <option value="งาน">งาน</option>
+          <option value="เรียน">เรียน</option>
+          <option value="ส่วนตัว">ส่วนตัว</option>
+        </select>
+        <button onclick="addTodo()">เพิ่ม</button>
+      </div>
+  
+      <input type="text" id="search-input" placeholder="ค้นหา..." oninput="renderTodos()">
+  
+      <ul id="todo-list"></ul>
     </div>
 
       <script src="/apps/toDoList.js"></script>

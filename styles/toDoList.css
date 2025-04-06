@@ -13,7 +13,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    width: 400px;
+    width: 450px;
   }
   
   h1 {
@@ -24,12 +24,13 @@ body {
   .input-group {
     display: flex;
     gap: 10px;
+    margin-bottom: 10px;
   }
   
-  input[type="text"] {
-    flex: 1;
+  input[type="text"], select {
     padding: 10px;
     font-size: 16px;
+    flex: 1;
   }
   
   button {
@@ -46,6 +47,13 @@ body {
     background-color: #27ae60;
   }
   
+  #search-input {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
   ul {
     list-style-type: none;
     padding: 0;
@@ -58,6 +66,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
   
   li.done {
@@ -65,22 +74,41 @@ body {
     color: gray;
   }
   
-  li .actions {
-    display: flex;
-    gap: 10px;
+  .category-label {
+    font-size: 12px;
+    background-color: #ccc;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-right: 10px;
   }
   
-  li .actions button {
-    background-color: #e74c3c;
-    border: none;
-    padding: 5px 10px;
-    color: white;
-    border-radius: 3px;
+  .actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 5px;
+  }
+  
+  .actions button {
     font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
     cursor: pointer;
   }
   
-  li .actions button:hover {
-    background-color: #c0392b;
+  .actions button.edit {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .actions button.done {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .actions button.delete {
+    background-color: #e74c3c;
+    color: white;
   }
   
