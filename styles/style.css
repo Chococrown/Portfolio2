@@ -118,9 +118,15 @@ html.dark{
         background-color: black;
         color: white;
     }
+
+    .portfolio-1 {
+        color: blueviolet;
+    }
     
 }
 
 .h101 {
     text-align: center;
 }
+
+

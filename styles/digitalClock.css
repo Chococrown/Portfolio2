@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .clock-container {
+    background-color: #333;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    text-align: center;
+  }
+  
+  #clock {
+    font-size: 60px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+  }
+  
+  #toggleFormat {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  #toggleFormat:hover {
+    background-color: #777;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
