@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมส์ทายตัวเลข</title>
+    <link rel="stylesheet" href="/styles/guessTheNumber.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>🎯 เกมทายตัวเลข (1-100)</h1>
+        <p>ลองทายตัวเลขที่คอมพิวเตอร์สุ่มไว้!</p>
+        
+        <input type="number" id="guessInput" min="1" max="100" placeholder="ใส่เลข 1-100">
+        <button id="guessBtn">ทายเลย</button>
+        
+        <p id="message"></p>
+        <p id="attempts"></p>
+    
+        <button id="restartBtn" style="display:none;">เริ่มใหม่</button>
+      </div>
+    
+      <script src="/apps/guessTheNumber.js"></script>
+    
+</body>
+</html>
