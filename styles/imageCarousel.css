@@ -1,4 +1,3 @@
-/* style.css */
 
 body {
     margin: 0;
@@ -7,6 +6,8 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 40px;
+
+    background-color: black;
   }
   
   .carousel-container {
